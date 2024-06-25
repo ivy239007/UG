@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+/*ウィンドウ背景色の設定*/
+body 
+{
+  background: #fefefe url(img/bg.png) repeat-x;
+}
+
+/*リンク色の設定*/
+a 
+{
+  color: #0c0c0c;
+}
+a:hover 
+{
+  color: #080808;
+  text-decoration: none;
+}
+
+/*ヘッダー,ナビ,フッターの共通設定*/
+header,nav,footer 
+{
+  text-align: left;
+}
+
+/*ナビ*/
+.menu li{
+  list-style-type: none;
+  display: inline-block;
+  width: 180px;
+  margin: 0,10px;
+}
+.menu a{
+  display: block;
+  padding: 30px;
+  background: #000;
+  border-radius: 15px;
+  color:#fff;
+  text-decoration: none;
+}
+.menu a:hover {
+  background: #f4f5f5;
+}
+/*ページタイトルの設定*/
+h1 {
+  width: 900px;
+  margin: 5px auto;
+  padding: 20px;
+  border: 5px solid #fdfafa;
+  background-color: #fcfbfb;
+  color: #0b0b0b;
+  font-size: 300%;
+  text-align: center;
+  line-height: 1;
+  border: 50%;
+  text-shadow: 1px 1px 2px #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-image: linear-gradient(to bottom, #f8f9f9, #f7f9f8);
+  font-family: 'Limelight', cursive;
+}
+
+/*コンテンツ枠の設定*/
+#contents {
+  width: 400px;
+  margin: 30px auto;
+  padding: 150px 150px;
+  border: 1px solid #060606;
+  background-color: #fff;
+}
+
+/*「もっと見る」リンクの設定*/
+.more {
+  text-align: right;
+}
+.more::after {
+  content: url(img/ico_arrow.png);
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+/*セクション間隔*/
+#contents > section + section {
+  margin-top: 80px;
+}
+
+
+/*円形にクリップ*/
+.img-round {
+  border-radius: 50%;
+}
+
+.section-title {
+  font-size: 40px; /* フォントサイズを設定 */
+  font-weight: bold; /* 太字に設定 */
+  text-align: center; /* テキストを中央揃えにする */
+  margin-top: -50px; /* 上部のマージンを追加 */
+  margin-bottom: 20px; /* 下部のマージンを追加 */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #a1a1a1;
+  color: #fff; /* テキストの色を白に設定 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #7d7d7d; /* ホバー時の色を少し濃い灰色に設定 */
+}
