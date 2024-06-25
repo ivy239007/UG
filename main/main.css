@@ -15,7 +15,7 @@ a:hover{
 } */
 
 /*ヘッダー,ナビ,フッターの共通設定*/
-header,nav,footer{
+nav,footer{
     text-align: center;
 }
 
@@ -43,6 +43,11 @@ h1{
     border-left: 10px solid #d0e35b;
     color: #6fbb9a;
 }
+
+/* .logout{
+    display: flex;
+    justify-content: flex-end;
+} */
 
 /*小見出しの設定*/
 .h-sub span{
