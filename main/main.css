@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*ウィンドウ背景色の設定*/
+/* body{
+    background-color: #fbf9cc;
+} */
+
+/*リンク色の設定*/
+/* a{
+    color: #df4839;
+}
+a:hover{
+    color: #ff705b;
+    text-decoration: none;
+} */
+
+/*ヘッダー,ナビ,フッターの共通設定*/
+header,nav,footer{
+    text-align: center;
+}
+
+/*ナビ*/
+
+
+/*ページタイトルの設定*/
+h1{
+    width: 1500px auto;
+    margin: 40px auto;
+    padding: 10px;
+    /*border: 5px solid #95dbbd;*/
+    background-color: #dfdfdf;
+    color: #000000;
+    font-size: 200%;
+    text-align: center;
+    line-height: 1;
+}
+
+/*大見出しの設定*/
+.h{
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px dotted #94c8b1;
+    border-left: 10px solid #d0e35b;
+    color: #6fbb9a;
+}
+
+/*小見出しの設定*/
+.h-sub span{
+    font-weight: normal;
+}
+
+/*コンテンツ枠の設定*/
+#contents{
+    margin: 40px;
+    padding: 40px 80px;
+    border: 1px solid #000000;
+    background-color: #fff;
+}
+
+#section{
+    margin: 1px;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+/*「もっと見る」リンクの設定*/
+.more{
+    text-align: right;
+}
+.more::after{
+    content:url(img/ico_arrow.png);
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+/*リンク種別アイコン*/
+a[target="_blank"]::after{
+    content: url(img/ico_blank.png);
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/*セクション間隔*/
+#contents > section + section{
+    margin-top: 80px;
+}
+
+/*回り込み設定*/
+
+
+/*円形にクリップ*/
+
+
