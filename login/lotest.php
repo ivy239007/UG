@@ -29,7 +29,6 @@ try{
         exit();
     }
 }
-
 catch(Exception $e){
     print('ただいまアクセスが集中しております。時間をおいて再度アクセスしてください。');
     echo $e->getMessage();

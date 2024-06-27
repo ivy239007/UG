@@ -7,16 +7,17 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
     </style>
-    <link rel="stylesheet" type="text/css" href="styles_S01.css">
+    <link rel="stylesheet" type="text/css" href="rg.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 
 <body>
-    <header>
-        <img src="" alt="Logo" class="logo">
+    <header style="margin-bottom: 30px;">
+        <h1>売上管理システム</h1>
     </header>
 
-    <main>
+    <main id="contents">
+          ログイン画面
         <form id="loginForm" method="post" action="lotest.php"> <!-- PHPファイルへのアクションを指定 -->
             <div class="form-group">
                 <label for="id">I D :</label>
