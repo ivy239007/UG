@@ -4,46 +4,80 @@
 <meta charset="UTF-8">
 <title>売上管理システム</title>
 <meta name="keywords" content="売上管理システム">
-<meta name="description" content="あいうえお">
+<meta name="description" content="売上管理システムあいうえお">
 <link rel="stylesheet" href="main.css"media="all">
 </head>
 
 <body>
-
         
     <header>
         <h1 class="title">売上管理システム<input class="logout" type="submit" value="ログアウト"></h1>
     </header>
+    
 
-    <div class="storeselect">
-        <label for="store">店舗:</label>
-        <select id="store">
-            <option value="option1">A支店</option>
-            <option value="option2">B支店</option>
-            <option value="option3">C支店</option>
-        </select>
-    </div>
+    <div class="container">
 
-    <p>今月の売上を登録</p>
-    <div class="flex">
-        <span>日付：</span><input type="text">
-        <span>売上金額：</span><input type="text">
-        <input type="submit" value="登録">
-    </div>
+        <div class="storeselect">
+            <label for="store">店舗:</label>
+            <select id="store">
+                <option value="option1">A支店</option>
+                <option value="option2">B支店</option>
+                <option value="option3">C支店</option>
+            </select>
+        </div>
 
-    <p>今月の売上目標</p>
-    <div class="flex">
-        <span>日付：</span><input type="text">
-        
-    </div>
 
-    <p>１日の売上目標</p>
-    <div class="flex">
-        <span>売上金額：</span><input type="text">
-    </div>
+        <p>今月の売上を登録</p>
+        <div class="flex">
+            <div>
+                <span class="container1">日付：<input type="text"></span>
+            </div>
 
-    <div>
-        <p>今月の売上実績</p>
+            <div>
+                <span class="container1">売上金額：<input type="text"></span>         
+            </div>
+            <input type="submit" value="登録">
+            
+        </div>
+
+        <div class="flex">
+            <div>
+                <p>今月の売上目標</p>
+                <div class="flex">
+                    <div>
+                        <span class="container1">日付：<input type="text"></span>
+                    </div>
+                </div>
+            </div>
+    
+            <div>
+                <p>１日の売上目標</p>
+                <div class="flex">
+                    <span class="container1">売上金額：<input type="text"></span>
+                    <input type="submit" value="設定">
+                </div>  
+            </div>
+        </div>
+
+
+        <div>
+            <p>今月の売上実績</p>
+            <div class="scroll">
+                ここに文字を入力する
+                ここに文字を入力する
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                aiueo
+            </div>
+        </div>
+
+
     </div>
 
     <footer>
