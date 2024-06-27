@@ -19,6 +19,10 @@ nav,footer{
     text-align: center;
 }
 
+.logout-button{
+    margin: 3px;
+}
+
 .title{
     border: 1px solid #000000;
     margin: 0px 50px 10px 50px;
@@ -32,6 +36,12 @@ nav,footer{
 .container1{
     border: 1px solid #000000;
     margin: 0px 10px;
+}
+
+.container2{
+    border: 1px solid #000000;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /*ページタイトルの設定*/
@@ -48,35 +58,35 @@ h1{
 }
 
 /*大見出しの設定*/
-.h{
+/* .h{
     padding: 10px;
     margin-bottom: 30px;
     border: 1px dotted #94c8b1;
     border-left: 10px solid #d0e35b;
     color: #6fbb9a;
-}
+} */
 
 .flex{
     display: flex;
 }
 
-/* .logout{
-    display: flex;
-    justify-content: flex-end;
-} */
-
-/*小見出しの設定*/
-.h-sub span{
-    font-weight: normal;
+.backcolor{
+    margin-bottom: 10px;
+    background-color:#f2f2f2
 }
 
+/*小見出しの設定*/
+/* .h-sub span{
+    font-weight: normal;
+} */
+
 /*コンテンツ枠の設定*/
-#contents{
+/* #contents{
     margin: 40px;
     padding: 40px 80px;
     border: 1px solid #000000;
     background-color: #fff;
-}
+} */
 
 #section{
     margin: 1px;
@@ -86,31 +96,31 @@ h1{
 
 .scroll{
     width: 100%;
-    height: 100px;
+    height: 300px;
     overflow-y: scroll;
     border: 1px #999999 solid
 }
 
 /*「もっと見る」リンクの設定*/
-.more{
+/* .more{
     text-align: right;
 }
 .more::after{
     content:url(img/ico_arrow.png);
     margin-left: 3px;
     vertical-align: middle;
-}
+} */
 
 /*リンク種別アイコン*/
-a[target="_blank"]::after{
+/* a[target="_blank"]::after{
     content: url(img/ico_blank.png);
     margin-left: 5px;
     vertical-align: middle;
-}
+} */
 
 /*セクション間隔*/
-#contents > section + section{
+/* #contents > section + section{
     margin-top: 80px;
-}
+} */
 
 
