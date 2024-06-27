@@ -18,14 +18,13 @@ try{
     $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if($rec == false){
-        echo('IDまたはパスワードが間違っています。<br/>');
-        //header("Location: S01_login.php");
+        header("Location: login2.php");
     }else{
         session_start();
         $_SESSION['login'] = 1;
         $_SESSION['db_username'] = $db_username;
         $_SESSION['db_password'] = $db_password;
-        header("Location: main.php");
+        header("Location: ../main/main.php");
         exit();
     }
 }
