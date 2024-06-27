@@ -44,6 +44,10 @@ h1{
     color: #6fbb9a;
 }
 
+.flex{
+    display: flex;
+}
+
 /* .logout{
     display: flex;
     justify-content: flex-end;
