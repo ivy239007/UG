@@ -39,6 +39,7 @@ $stmt -> execute();
 //最後にセッション情報を破棄
 session_destroy();
 ?>
+<button onclick="location.href='../main/main.php'" type="button" name="name" value="value" id="BackButton">メイン画面へ戻る</button>
 </div>
 </body>
 </html>

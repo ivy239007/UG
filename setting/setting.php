@@ -14,7 +14,7 @@
     <p></p>
   </header>
   <main id="contents">
-    <form action="seltutei_1.php" method="post">
+    <form action="setting1.php" method="post">
       <div class="section-title">売上目標の設定</div>
       <br>
       <div class="form-group">

@@ -26,7 +26,7 @@ $_SESSION['target'] = $target;
 <body>
 <div class="container">
 <h1>確認画面</h1>
-<form action="seltutei2.php" method="post">
+<form action="setting2.php" method="post">
 <dl>
 <dt>店舗　：</dt><dd><?php echo $store ?></dd>
 <dt>月　：</dt><dd><?php echo $month ?></dd>
