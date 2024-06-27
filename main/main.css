@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 /*ウィンドウ背景色の設定*/
-/* body{
-    background-color: #fbf9cc;
-} */
+body{
+    background-color: #fbfae3;
+}
 
 /*リンク色の設定*/
 /* a{
