@@ -9,8 +9,6 @@
 </head>
 
 <body>
-
-        
     <header>
         <h1 class="title">売上管理システム<input class="logout" type="submit" value="ログアウト"></h1>
     </header>
