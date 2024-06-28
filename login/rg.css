@@ -3,7 +3,7 @@
 /*ウィンドウ背景色の設定*/
 body 
 {
-  background: #fefefe url(img/bg.png) repeat-x;
+  background: #fffff4
 }
 
 /*リンク色の設定*/
@@ -51,15 +51,13 @@ h1 {
   margin: 5px auto;
   padding: 5px;
   border: 5px solid #fdfafa;
-  background-color: #fcfbfb;
+  background-color: rgb(194, 242, 255);
   color: #0b0b0b;
   font-size: 300%;
   text-align: center;
   line-height: 1;
   border: 50%;
   text-shadow: 1px 1px 2px #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  background-image: linear-gradient(to bottom, #f8f9f9, #f7f9f8);
   font-family: 'Limelight', cursive;
 }
 
@@ -69,7 +67,7 @@ h1 {
   margin: 50px auto;
   padding: 50px 50px;
   border: 0.5px solid #060606;
-  background-color: #fff;
+  background-color: rgb(221, 244, 251);
 }
 
 /*「もっと見る」リンクの設定*/
