@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>売上管理システム</title>
-<meta name="keywords" content="AKAHAZARD">
-<meta name="description" content="AKAHAZARD">
-<link href="test1.css" rel="stylesheet" media="all">
+<meta name="keywords" content="uriage">
+<meta name="description" content="uriage">
+<link rel="stylesheet" href="se.css"  media="all">
 </head>
 <p class="more clear"><a href="../login/login.php">ログアウト</a></p>
 <body>
   <header>
     <h1>売上管理システム</h1>
-    <p></p>
+   
   </header>
   <main id="contents">
     <form action="setting1.php" method="post">
