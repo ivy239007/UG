@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -7,13 +8,10 @@
 <meta name="description" content="uriage">
 <link rel="stylesheet" href="se.css"  media="all">
 </head>
-
+<p class="more clear"><a href="../login/login.php">ログアウト</a></p>
 <body>
   <header>
-    <div class="title-contener">
-       <h1>売上管理システム <p class="more clear"><a href="../login/login.php">ログアウト</a></p></h1>
-    </div>
-    
+    <h1>売上管理システム</h1>
    
   </header>
   <main id="contents">
@@ -23,10 +21,10 @@
       <div class="form-group">
       <label for="store">店舗:</label>
       <select name="store">
-        <option value="大分県">大分県</option>
-        <option value="福岡県">福岡県</option>
-        <option value="大阪府">大阪府</option>
-        <option value="東京都">東京都</option>
+        <option value="大分支店">大分支店</option>
+        <option value="福岡支店">福岡支店</option>
+        <option value="大阪支店">大阪支店</option>
+        <option value="東京支店">東京支店</option>
       </select>
       </div>
       <br>

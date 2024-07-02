@@ -2,7 +2,7 @@
 
 /*ウィンドウ背景色の設定*/
 body{
-    background-color: #fbfae3;
+    background-color: #fffff4;
 }
 
 /*リンク色の設定*/
@@ -15,7 +15,7 @@ a:hover{
 } */
 
 /*ヘッダー,ナビ,フッターの共通設定*/
-nav,footer{
+footer{
     text-align: center;
 }
 
@@ -24,22 +24,23 @@ nav,footer{
 }
 
 .title{
-    border: 1px solid #000000;
+    background-color: rgb(194, 242, 255);
+    /* border: 1px solid #000000; */
     margin: 0px 50px 10px 50px;
 }
 
 .container{
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     margin: 0px 50px;
 }
 
 .container1{
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     margin: 0px 10px;
 }
 
 .container2{
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     display: flex;
     justify-content: flex-end;
 }
@@ -71,8 +72,9 @@ h1{
 }
 
 .backcolor{
+    padding: 0px 0px 5px 5px;
     margin-bottom: 10px;
-    background-color:#f2f2f2
+    background-color: rgb(221, 244, 251);
 }
 
 /*小見出しの設定*/
