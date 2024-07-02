@@ -21,10 +21,10 @@
       <div class="form-group">
       <label for="store">店舗:</label>
       <select name="store">
-        <option value="大分県">大分県</option>
-        <option value="福岡県">福岡県</option>
-        <option value="大阪府">大阪府</option>
-        <option value="東京都">東京都</option>
+        <option value="大分支店">大分支店</option>
+        <option value="福岡支店">福岡支店</option>
+        <option value="大阪支店">大阪支店</option>
+        <option value="東京支店">東京支店</option>
       </select>
       </div>
       <br>
