@@ -7,10 +7,12 @@
 <meta name="description" content="uriage">
 <link rel="stylesheet" href="se.css"  media="all">
 </head>
-<p class="more clear"><a href="../login/login.php">ログアウト</a></p>
+
 <body>
   <header>
-    <h1>売上管理システム</h1>
+       <h1>売上管理システム</h1>
+       <p class="more clear"><a href="../login/login.php">ログアウト</a></p>
+    
    
   </header>
   <main id="contents">

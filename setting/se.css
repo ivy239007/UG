@@ -47,12 +47,10 @@ header{
 }
 /*ページタイトルの設定*/
 h1 {
-  width: 900px;
   margin: 5px auto;
   padding: 5px;
   border: 5px solid #fdfafa;
   color: #0b0b0b;
-  background-color: rgb(194, 242, 255);
   font-size: 300%;
   text-align: center;
   line-height: 1;
@@ -68,6 +66,12 @@ h1 {
   padding: 50px 50px;
   border: 0.5px solid #060606;
   background-color: rgb(221, 244, 251);
+}
+
+.title-contener{
+  width: 900px;
+  float: right;
+  background-color: rgb(194, 242, 255);
 }
 
 /*「もっと見る」リンクの設定*/
