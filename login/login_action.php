@@ -2,12 +2,12 @@
 try{
     $user_id = $_POST['id'];
     $user_pass = $_POST['pw'];
-    $dsn = 'mysql:dbname=ug;host=172.16.3.136;charset=utf8';
+    $dsn = 'mysql:dbname=earnings;host=172.16.3.136;charset=utf8';
     $db_username = "sample_user";
     $db_password = "";
 
     $dbh = new PDO($dsn, $db_username, $db_password);
-    $sql= "SELECT * FROM administrator WHERE login_id = ? AND password = ?";
+    $sql= "SELECT * FROM manager WHERE login_id = ? AND password = ?";
     $stmt = $dbh->prepare($sql);
     $data[]= $user_id;
     $data[]= $user_pass;
