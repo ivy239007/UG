@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /*ウィンドウ背景色の設定*/
-
 body 
 {
   background: #fffff4
@@ -48,24 +47,25 @@ header{
 }
 /*ページタイトルの設定*/
 h1 {
-  width: 900px;
-  margin: 5px auto;
+  width: 100%;
+  margin: 5px 0 30px;
   padding: 5px;
   border: 5px solid #fdfafa;
-  color: #0b0b0b;
   background-color: rgb(194, 242, 255);
-  font-size: 300%;
+  color: #0b0b0b;
+  font-size: 800%; /* ここがフォントサイズの設定です */
   text-align: center;
   line-height: 1;
-  border: 50%;
   text-shadow: 1px 1px 2px #fff;
   font-family: 'Limelight', cursive;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*コンテンツ枠の設定*/
 #contents {
   width: 300px;
-  margin: 5px auto;
+  margin: 50px auto;
   padding: 50px 50px;
   border: 0.5px solid #060606;
   background-color: rgb(221, 244, 251);
@@ -148,4 +148,80 @@ h1 {
 #contents {
   /* 他のプロパティは省略 */
   margin-top: 30px; /* コンテンツの上部に追加のマージンを設定 */
+}
+
+header {
+  text-align: center; /* タイトルを中央揃えにする */
+  padding: 10px 0; /* 上下のパディングを設定 */
+}
+
+header .title-container {
+  display: flex; /* フレックスコンテナとして表示 */
+  justify-content: center; /* 要素を中央に配置 */
+  align-items: center; /* 垂直方向に中央揃え */
+}
+
+header h1 {
+  font-size: 50px; /* フォントサイズを設定 */
+  margin: 0; /* マージンをリセット */
+}
+
+.logout-link {
+  margin-left: 10px; /* ログアウトリンクの左マージンを設定 */
+}
+
+/* se.css */
+
+#contents select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center; /* テキストを中央揃えにする */
+}
+
+#contents select option {
+  text-align: center; /* 選択肢を中央揃えにする */
+}
+
+/* ボタンのスタイル */
+#contents input[type="submit"],
+#contents button {
+  padding: 15px 30px;
+  background-color: #a1a1a1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px auto;
+  text-align: center;
+}
+
+#contents input[type="submit"]:hover,
+#contents button:hover {
+  background-color: #7d7d7d;
+}
+
+header {
+  text-align: center; /* タイトルとログアウトリンクを中央揃え */
+  padding: 10px 0; /* ヘッダーの上下にパディングを追加 */
+}
+
+header .title-container {
+  display: flex; /* フレックスボックスを使用して配置 */
+  justify-content: center; /* 水平方向に中央寄せ */
+  align-items: center; /* 垂直方向に中央揃え */
+}
+
+header h1 {
+  font-size: 50px; /* タイトルのフォントサイズを調整 */
+  margin: 0; /* デフォルトのマージンをリセット */
+}
+
+.logout-link {
+  margin-left: 1000px; /* タイトルとログアウトリンクの間にスペースを設ける */
 }
