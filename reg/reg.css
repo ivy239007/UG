@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/*ウィンドウ背景色の設定*/
+body{
+    background-color: #fffff4;
+}
+
+
+/*ヘッダー,ナビ,フッターの共通設定*/
+footer{
+    text-align: center;
+}
+
+.logout-button{
+    margin: 3px;
+}
+
+.back-button{
+    margin: 0px 40%;
+}
+
+.title{
+    background-color: rgb(194, 242, 255);
+    /* border: 1px solid #000000; */
+    margin: 0px 50px 10px 50px;
+}
+
+.container{
+    /* border: 1px solid #000000; */
+    margin:0px 30% auto;
+}
+
+.container1{
+    /* border: 1px solid #000000; */
+    margin-left:30%;
+}
+
+.container2{
+    /* border: 1px solid #000000; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*ページタイトルの設定*/
+h1{
+    width: 1500px auto;
+    margin: 40px auto;
+    padding: 10px;
+    /*border: 5px solid #95dbbd;*/
+    background-color: #dfdfdf;
+    color: #000000;
+    font-size: 200%;
+    text-align: center;
+    line-height: 1;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.backcolor{
+    padding: 50px;
+    margin: 100px;
+    background-color: rgb(221, 244, 251);
+}
+
+
+#section{
+    margin: 1px;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+.scroll{
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px #999999 solid
+}
+
+
+
