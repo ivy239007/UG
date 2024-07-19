@@ -14,7 +14,7 @@
   }
 
   header {
-    padding: 10px 20px; /* ヘッダーの余白を設定 */
+    padding: 20px 0px; /* ヘッダーの余白を設定 */
     text-align: center; /* ヘッダーテキストを中央揃え */
     position: relative; /* 相対位置指定 */
   }
@@ -58,8 +58,10 @@
   }
 
   .Btn {
-    margin-top: 20px; /* ボタンの上の余白を設定 */
+    margin-top: 10px; /* ボタンの上の余白を設定 */
     text-align: center; /* ボタンを中央揃え */
+    display: flex;
+    justify-content: center; /* ボタンを中央揃え
   }
 
   footer {
@@ -109,12 +111,20 @@
         <label for="target">売上目標:</label>
         <input type="text" id="target" name="target"><br>
       </div>
-      
+
       <div class="Btn">
-        <input type="submit" value="登録">
-      </div>
+
+      <input type="submit" value="登録">
+      <button onclick="location.href='../main/main.php'" type="button" id="BackButton">戻る</button>
+    
+</div>
+      
+
     </form>
-    <button onclick="location.href='../main/main.php'" type="button" id="BackButton">戻る</button>
+
+
+
+
   </main>
 
   <footer>

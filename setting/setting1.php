@@ -20,7 +20,7 @@ $_SESSION['target'] = $target;
 <head>
 <meta charset="utf-8">
 <title>DBに接続しているフォーム｜確認画面</title>
-<link rel="stylesheet" href="css/form.css">
+<link rel="stylesheet" href="k1.css" media="all">
 </head>
 
 <body>
@@ -28,9 +28,9 @@ $_SESSION['target'] = $target;
 <h1>確認画面</h1>
 <form action="setting2.php" method="post">
 <dl>
-<dt>店舗:</dt><dd><?php echo $store ?></dd>
-<dt>月:</dt><dd><?php echo $month ?></dd>
-<dt>目標売上:</dt><dd><?php echo $target ?></dd> 
+<dt>店舗　：</dt><dd><?php echo $store ?></dd>
+<dt>月　：</dt><dd><?php echo $month ?></dd>
+<dt>目標売上　：</dt><dd><?php echo $target ?></dd> 
 </dl>
 <p>
 <input type="submit" value="送信">
