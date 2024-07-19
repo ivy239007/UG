@@ -20,7 +20,7 @@ $_SESSION['target'] = $target;
 <head>
 <meta charset="utf-8">
 <title>DBに接続しているフォーム｜確認画面</title>
-<link rel="stylesheet" href="k1.css" media="all">
+<link rel="stylesheet" href="setting1.css" media="all">
 </head>
 
 <body>
