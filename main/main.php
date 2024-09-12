@@ -6,24 +6,6 @@ $db_password = "";
 
 // PDOオブジェクトの作成
 $dbh = new PDO($dsn, $db_username, $db_password);
-
-// 店舗名とshop_idの対応関係を配列で定義
-$shop_ids = [
-    '大分支店' => 1,
-    '福岡支店' => 2,
-    '大阪支店' => 3,
-    '東京支店' => 4,
-];
-
-// デフォルトの店舗を設定
-$selected_store = '大分支店';
-if (isset($_POST['store'])) {
-    // POSTリクエストから選択された店舗を取得
-    $selected_store = $_POST['store'];
-}
-
-// 選択された店舗のshop_idを取得
-$shop_id = $shop_ids[$selected_store];
 ?>
 
 <!DOCTYPE html>
@@ -42,16 +24,28 @@ $shop_id = $shop_ids[$selected_store];
     </header>
     
     <!-- フォームの開始 -->
-    <form action="" method="post">
+    <form  id = "" method="post" action="insert_main.php">
         <!-- 店舗選択 -->
         <div class="storeselect">
-            <label for="store">店舗:</label>
-            <select name="store" id="name" onchange="this.form.submit()">
-                <option value="大分支店" <?php if ($selected_store == '大分支店') echo 'selected'; ?>>大分支店</option>
-                <option value="福岡支店" <?php if ($selected_store == '福岡支店') echo 'selected'; ?>>福岡支店</option>
-                <option value="大阪支店" <?php if ($selected_store == '大阪支店') echo 'selected'; ?>>大阪支店</option>
-                <option value="東京支店" <?php if ($selected_store == '東京支店') echo 'selected'; ?>>東京支店</option>
-            </select>
+            <label for="store">店舗:<?php
+            session_start();
+            $shop_id = $_SESSION['shop_id'];
+            $shop;
+            switch($shop_id){
+                case 1 :
+                    $shop = "大分支店";
+                    break;
+                case 2 :
+                    $shop = "福岡支店";
+                    break;
+                case 3 :
+                    $shop = "大阪支店";
+                    break;
+                case 4 :
+                    $shop = "東京支店";
+                    break;
+            }
+            echo "$shop"?></label>
         </div>
         
         <p>売上を登録</p> 
@@ -71,11 +65,11 @@ $shop_id = $shop_ids[$selected_store];
         <p>今月の売上実績</p>
         <?php
         // 現在の年月を取得して表示
-        $now = date('Y/m');
-        echo $now;
+        $year = date('Y');
+        $month = date('m');
 
         // 選択された店舗の売上データをデータベースから取得するSQLクエリ
-        $sql = "SELECT date, sales_amount FROM earnings WHERE shop_id = :shop_id";
+        $sql = "SELECT date, sales_amount FROM earnings WHERE shop_id = :shop_id AND date LIKE '$year%$month%'";
         $stm = $dbh->prepare($sql);
         $stm->bindParam(':shop_id', $shop_id, PDO::PARAM_INT);
         $stm->execute();

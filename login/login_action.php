@@ -9,21 +9,28 @@ try{
     $dbh = new PDO($dsn, $db_username, $db_password);
     $sql= "SELECT * FROM administrator WHERE login_id = ? AND password = ?";
     $stmt = $dbh->prepare($sql);
-    $data[]= $user_id;
-    $data[]= $user_pass;
+    $data = [$user_id,$user_pass,];
     $stmt->execute($data);
 
-    $dbh = null;
+    // $dbh = null;
 
     $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if($rec == false){
         header("Location: login2.php");
     }else{
+        //$sql= "SELECT shop_id FROM administrator WHERE login_id = ? AND password = ?";
+        //$stmt = $dbh->prepare($sql);
+        $stmt->execute([$user_id, $user_pass]); // ここでクエリを実行
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC); // クエリの結果を取得
         session_start();
-        $_SESSION['login'] = 1;
+        
         $_SESSION['db_username'] = $db_username;
         $_SESSION['db_password'] = $db_password;
+        $_SESSION['Login_id'] = $user_id;
+        $_SESSION['password'] = $user_pass;
+        $_SESSION['shop_id'] = $row['shop_id'];
         header("Location: ../main/main.php");
         exit();
     }

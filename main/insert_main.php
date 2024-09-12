@@ -1,16 +1,16 @@
 <?php
 $user = "sample_user";
 $password = "";
-$dsn = 'mysql:dbname=earnings;host=172.16.3.136;charset=utf8';
+$dsn = 'mysql:dbname=ug;host=172.16.3.136;charset=utf8';
 
-
-
-$store = $_POST["store"];
+session_start();
+$shop_id = $_SESSION['shop_id'];
 $date = $_POST["date"];
 $text = $_POST["text"];
 try{
+    
     $pdo = new PDO($dsn, $user, $password);
-    $sql = 'INSERT INTO earning(date, store, sales)VALUES("'.$date.'","'.$store.'","'.$text.'")';
+    $sql = 'INSERT INTO earnings(date, shop_id, sales_amount)VALUES("'.$date.'","'.$shop_id.'","'.$text.'")';
     $stm = $pdo->prepare($sql);
     $stm -> execute();
     header("Location:main.php");

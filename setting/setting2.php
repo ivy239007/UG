@@ -2,7 +2,7 @@
 // セッションの開始
 session_start();
 
-$store = $_SESSION['store'];
+$shop_id = $_SESSION['shop_id'];
 $month = $_SESSION['month'];
 $target = $_SESSION['target'];
 
@@ -25,19 +25,56 @@ $user = 'sample_user';//DBユーザー名
 $pass = '';//DBパスワード
 
 //DBに接続
-$dsn = 'mysql:host=172.16.3.136;dbname=earnings;charset=utf8';
+$dsn = 'mysql:host=172.16.3.136;dbname=ug;charset=utf8';
 $conn = new PDO($dsn, $user, $pass);
 //「$conn」は、任意のオブジェクト名
 
-
+switch($month){
+    case "1月":
+        $month = 1;
+        break;
+    case "2月":
+        $month = 2;
+        break;
+    case "3月":
+        $month = 3;
+        break;
+    case "4月":
+        $month = 4;
+        break;
+    case "5月":
+        $month = 5;
+        break;
+    case "6月":
+        $month = 6;
+        break;
+    case "7月":
+        $month = 7;
+        break;
+    case "8月":
+        $month = 8;
+        break;
+    case "9月":
+        $month = 9;
+        break;    
+    case "10月":
+        $month = 10;
+        break;
+        
+    case "11月":
+        $month = 11;
+        break;
+        
+    case "12月":
+        $month = 12;
+        break;
+}
 // データの追加
-$sql = 'INSERT INTO sales_target(store, month, target) VALUES("'.$store.'","'.$month.'","'.$target.'")';
+$sql = 'INSERT INTO sales_target(monthly_id, shop_id, sale_target) VALUES("'.$month.'","'.$shop_id.'","'.$target.'")';
 
 $stmt = $conn -> prepare($sql);
 $stmt -> execute();
 
-//最後にセッション情報を破棄
-session_destroy();
 ?>
 <button onclick="location.href='../main/main.php'" type="button" name="name" value="value" id="BackButton">メイン画面へ戻る</button>
 </div>

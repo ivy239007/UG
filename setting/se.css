@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 /*ウィンドウ背景色の設定*/
+
 body 
 {
   background: #fffff4
@@ -20,11 +21,11 @@ a:hover
 /*ヘッダー,ナビ,フッターの共通設定*/
 header,nav,footer 
 {
-  text-align: right;
+  text-align: left;
 }
 
 header{
-  margin: bottom 12px;
+  margin: bottom 120px;
 }
 
 /*ナビ*/
@@ -46,15 +47,17 @@ header{
   background: #f4f5f5;
 }
 /*ページタイトルの設定*/
-span {
-  width: 1000%;
+h1 {
+  width: 900px;
+  margin: 5px auto;
   padding: 5px;
   border: 5px solid #fdfafa;
-  background-color: rgb(194, 242, 255);
   color: #0b0b0b;
-  font-size: 150%; /* ここがフォントサイズの設定です */
+  background-color: rgb(194, 242, 255);
+  font-size: 300%;
   text-align: center;
   line-height: 1;
+  border: 50%;
   text-shadow: 1px 1px 2px #fff;
   font-family: 'Limelight', cursive;
 }
@@ -62,7 +65,7 @@ span {
 /*コンテンツ枠の設定*/
 #contents {
   width: 300px;
-  margin: 50px auto;
+  margin: 5px auto;
   padding: 50px 50px;
   border: 0.5px solid #060606;
   background-color: rgb(221, 244, 251);
@@ -75,6 +78,7 @@ span {
 .more::after {
   content: url(img/ico_arrow.png);
   margin-left: 3px;
+  vertical-align: middle;
 }
 
 /*セクション間隔*/
@@ -96,7 +100,6 @@ span {
   margin-bottom: 20px; /* 下部のマージンを追加 */
 }
 
-/* ボタンの共通スタイル */
 button {
   padding: 10px 20px;
   background-color: #a1a1a1;
@@ -104,24 +107,14 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  display: inline-block;
-  margin: 0 10px; /* 左右のマージンを追加 */
-  text-align: center;
-  font-size: 16px; /* フォントサイズを指定 */
+  display: block;
+  margin: 0 auto;
 }
 
 button:hover {
   background-color: #7d7d7d; /* ホバー時の色を少し濃い灰色に設定 */
 }
 
-/* ボタンの横並び設定 */
-.button-group {
-  display: flex; /* フレックスボックスを使用 */
-  justify-content: center; /* ボタンを中央揃え */
-  gap: 10px; /* ボタン間のスペースを設定 */
-  margin-top: 20px; /* 上部のマージンを追加 */
-  /* 必要に応じて他のスタイルを追加 */
-}
 #contents {
   text-align: center; /* #contents 要素内の全ての要素を中央揃えにする */
 }
@@ -147,90 +140,12 @@ button:hover {
   box-sizing: border-box; /* ボックスモデルをborder-boxに設定 */
 }
 
+h1 {
+  /* 他のプロパティは省略 */
+  margin-bottom: 30px; /* タイトルの下部に追加のマージンを設定 */
+}
+
 #contents {
   /* 他のプロパティは省略 */
   margin-top: 30px; /* コンテンツの上部に追加のマージンを設定 */
-}
-
-header {
-  text-align: center; /* タイトルを中央揃えにする */
-}
-
-header .title-container {
-  justify-content: center; /* 要素を中央に配置 */
-  align-items: center; /* 垂直方向に中央揃え */
-}
-.logout-link {
-  margin-right: 10px; /* ログアウトリンクの左マージンを設定 */
-}
-
-/* se.css */
-
-#contents select {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 15px;
-  text-align: center; /* テキストを中央揃えにする */
-}
-
-#contents select option {
-  text-align: center; /* 選択肢を中央揃えにする */
-}
-
-/* ボタンのスタイル */
-#contents input[type="submit"],
-#contents button {
-  padding: 15px 30px;
-  background-color: #a1a1a1;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: inline-block;
-  margin: 05px auto;
-  text-align: left;
-  display: flex;
-  justify-content: center; /* ボタンを中央揃え */
-  gap: 10px; /* ボタン間のスペースを設定 */
-  margin-top: 20px; /* 上部のマージンを追加 */
-}
-
-#contents input[type="submit"]:hover,
-#contents button:hover {
-  background-color: #7d7d7d;
-}
-
-header {
-  padding: 10px 0; /* ヘッダーの上下にパディングを追加 */
-}
-
-header .title-container {
-  display: flex; /* フレックスボックスを使用して配置 */
-  justify-content: center; /* 水平方向に中央寄せ */
-  align-items: center; /* 垂直方向に中央揃え */
-}
-
-.button-container {
-  display: flex;
-  justify-content: center; /* ボタンを中央揃えにする場合 */
-  gap: 20px; /* ボタン間のスペース */
-  margin: 30px; /* ボタンコンテナのマージン */
-}
-
-.button-container button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  color: white;
-}
-
-.button-container 
-{
-  justify-content: flex-end;
 }
