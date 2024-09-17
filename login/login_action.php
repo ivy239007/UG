@@ -28,8 +28,7 @@ try{
         
         $_SESSION['db_username'] = $db_username;
         $_SESSION['db_password'] = $db_password;
-        $_SESSION['Login_id'] = $user_id;
-        $_SESSION['password'] = $user_pass;
+        $_SESSION['login'] = true;
         $_SESSION['shop_id'] = $row['shop_id'];
         header("Location: ../main/main.php");
         exit();

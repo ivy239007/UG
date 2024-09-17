@@ -1,4 +1,19 @@
-﻿
+﻿<?php
+session_start();
+if(isset($_SESSION['login'])==false){
+    print'ログインされていません。<br/>';
+    print'<a href="../login/login.php">ログイン画面へ</a>';
+    exit();
+}
+// データベース接続設定
+$dsn = 'mysql:dbname=ug;host=172.16.3.136;charset=utf8';
+$db_username = "sample_user";
+$db_password = "";
+
+// PDOオブジェクトの作成
+$dbh = new PDO($dsn, $db_username, $db_password);
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -19,24 +34,24 @@
       <div class="section-title">売上目標の設定</div>
       <br>
       <div class="form-group">
-      <label for="store">店舗:<?php
-      session_start();
-      $shop_id = $_SESSION['shop_id'];
-      $shop;
-      switch($shop_id){
-        case 1 :
-          $shop = "大分支店";
-          break;
-        case 2 :
-          $shop = "福岡支店";
-          break;
-        case 3 :
-          $shop = "大阪支店";
-          break;
-        case 4 :
-          $shop = "東京支店";
-          break;
-      }
+      <label for="store">店舗:
+        <?php
+        $shop_id = $_SESSION['shop_id'];
+        $shop;
+        switch($shop_id){
+          case 1 :
+            $shop = "大分支店";
+            break;
+          case 2 :
+            $shop = "福岡支店";
+            break;
+          case 3 :
+            $shop = "大阪支店";
+            break;
+          case 4 :
+            $shop = "東京支店";
+            break;
+          }
       echo "$shop"?></label></label>
       </div>
       <br>
@@ -60,7 +75,7 @@
       <br>
       <div class="form-group">
       <label for="target">売上目標:</label>
-      <input type="text" id="target" name="target"><br>
+      <input type="number" id="target" name="target"><br>
       </div>
       
       <div class="Btn">

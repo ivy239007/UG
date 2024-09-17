@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(isset($_SESSION['login'])==false){
+    print'ログインされていません。<br/>';
+    print'<a href="../login/login.php">ログイン画面へ</a>';
+    exit();
+}
 // データベース接続設定
 $dsn = 'mysql:dbname=ug;host=172.16.3.136;charset=utf8';
 $db_username = "sample_user";
@@ -20,7 +26,9 @@ $dbh = new PDO($dsn, $db_username, $db_password);
 
 <body>
     <header>
-        <h1 class="title">売上管理システム<input onclick="location.href='../login/login.php'" class="logout" type="submit" value="ログアウト"></h1>
+        <h1 class="title">売上管理システム
+            <input onclick="location.href='../log_out/log_out.php'" class="logout" type="submit" value="ログアウト">
+        </h1>
     </header>
     
     <!-- フォームの開始 -->
@@ -28,7 +36,7 @@ $dbh = new PDO($dsn, $db_username, $db_password);
         <!-- 店舗選択 -->
         <div class="storeselect">
             <label for="store">店舗:<?php
-            session_start();
+            $login = $_SESSION['login'];
             $shop_id = $_SESSION['shop_id'];
             $shop;
             switch($shop_id){
@@ -51,19 +59,21 @@ $dbh = new PDO($dsn, $db_username, $db_password);
         <p>売上を登録</p> 
         <div class="flex">
             <span>日付：</span><input type="date" name="date">
-            <span>売上金額：</span><input type="text" name="text">
+            <span>売上金額：</span><input type="number" name="text">
             <input type="submit" value="登録">
         </div>
     </form>
 
     <div>
         <br>
-        <span>売上目標 </span><span><input onclick="location.href='../setting/setting.php'" class="setting" type="submit" value="設定"></span>
+        <span>売上目標 </span>
+        <span><input onclick="location.href='../setting/setting.php'" class="setting" type="submit" value="設定"></span>
     </div>
     
     <div>
         <p>今月の売上実績</p>
         <?php
+
         // 現在の年月を取得して表示
         $year = date('Y');
         $month = date('m');
