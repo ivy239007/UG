@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+/*ウィンドウ背景色の設定*/
+body 
+{
+  background: #fffff4
+}
+
+/*リンク色の設定*/
+a 
+{
+  color: #0c0c0c;
+}
+a:hover 
+{
+  color: #080808;
+  text-decoration: none;
+}
+
+/*ヘッダー,ナビ,フッターの共通設定*/
+header,nav,footer 
+{
+  text-align: left;
+}
+
+header{
+  margin: bottom 120px;
+}
+
+/*ナビ*/
+.menu li{
+  list-style-type: none;
+  display: inline-block;
+  width: 180px;
+  margin: 0,10px;
+}
+.menu a{
+  display: block;
+  padding: 30px;
+  background: #000;
+  border-radius: 15px;
+  color:#fff;
+  text-decoration: none;
+}
+.menu a:hover {
+  background: #f4f5f5;
+}
+/*ページタイトルの設定*/
+h1 {
+  width: 900px;
+  margin: 5px auto;
+  padding: 5px;
+  border: 5px solid #fdfafa;
+  background-color: rgb(194, 242, 255);
+  color: #0b0b0b;
+  font-size: 300%;
+  text-align: center;
+  line-height: 1;
+  border: 50%;
+  text-shadow: 1px 1px 2px #fff;
+  font-family: 'Limelight', cursive;
+}
+
+/*コンテンツ枠の設定*/
+#contents {
+  width: 300px;
+  margin: 50px auto;
+  padding: 50px 50px;
+  border: 0.5px solid #060606;
+  background-color: rgb(221, 244, 251);
+}
+
+/*「もっと見る」リンクの設定*/
+.more {
+  text-align: right;
+}
+.more::after {
+  content: url(img/ico_arrow.png);
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+/*セクション間隔*/
+#contents > section + section {
+  margin-top: 80px;
+}
+
+
+/*円形にクリップ*/
+.img-round {
+  border-radius: 50%;
+}
+
+.section-title {
+  font-size: 40px; /* フォントサイズを設定 */
+  font-weight: bold; /* 太字に設定 */
+  text-align: center; /* テキストを中央揃えにする */
+  margin-top: -50px; /* 上部のマージンを追加 */
+  margin-bottom: 20px; /* 下部のマージンを追加 */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #a1a1a1;
+  color: #fff; /* テキストの色を白に設定 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #7d7d7d; /* ホバー時の色を少し濃い灰色に設定 */
+}
+
+#contents {
+  text-align: center; /* #contents 要素内の全ての要素を中央揃えにする */
+}
+
+
+
+.form-group {
+  margin-bottom: 15px; /* フォームグループ間のマージンを設定 */
+}
+
+.form-group label {
+  display: block; /* ラベルをブロック要素として表示 */
+  margin-bottom: 5px; /* ラベルの下のマージンを設定 */
+  text-align: left; /* ラベルのテキストを左揃えにする */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%; /* 入力フィールドを100%幅に設定 */
+  padding: 10px; /* パディングを設定 */
+  border: 1px solid #ccc; /* ボーダーを設定 */
+  border-radius: 4px; /* 角丸を設定 */
+  box-sizing: border-box; /* ボックスモデルをborder-boxに設定 */
+}
+
+h1 {
+  /* 他のプロパティは省略 */
+  margin-bottom: 30px; /* タイトルの下部に追加のマージンを設定 */
+}
+
+#contents {
+  /* 他のプロパティは省略 */
+  margin-top: 30px; /* コンテンツの上部に追加のマージンを設定 */
+}
